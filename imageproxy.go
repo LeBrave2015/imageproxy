@@ -135,7 +135,7 @@ func (p *Proxy) serveImage(w http.ResponseWriter, r *http.Request) {
 	}
 	defer resp.Body.Close()
 
-	cached := resp.Header.Get(httpcache.XFromCache)
+	//cached := resp.Header.Get(httpcache.XFromCache)
 
 	copyHeader(w.Header(), resp.Header, "Cache-Control", "Last-Modified", "Expires", "Etag", "Link")
 
